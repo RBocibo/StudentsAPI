@@ -28,7 +28,7 @@ namespace Students.Web.Controllers
             return Ok(cretaeStudent);
         }
 
-        [HttpDelete]
+        [HttpDelete("{studentId}")]
         public async Task RemoveStudent(Guid studentId)
         {
             await _studentService.RemoveStudentAsync(studentId);
